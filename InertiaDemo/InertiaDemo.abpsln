@@ -1,0 +1,37 @@
+{
+  "id": "7deed2bf-1308-4a8a-9276-dfcd9bc091cb",
+  "template": "app-nolayers",
+  "versions": {
+    "AbpFramework": "8.3.0",
+    "AbpCommercial": "8.3.0",
+    "AbpStudio": "0.8.3"
+  },
+  "modules": {
+    "InertiaDemo": {
+      "path": "InertiaDemo.abpmdl"
+    }
+  },
+  "runProfiles": {
+    "Default": {
+      "path": "etc/run-profiles/Default.abprun.json"
+    }
+  },
+  "options": {
+    "httpRequests": {
+      "ignoredUrls": [
+        "^/metrics$"
+      ]
+    }
+  },
+  "creatingStudioConfiguration": {
+    "template": "app-nolayers",
+    "createdAbpStudioVersion": "0.8.3",
+    "uiFramework": "mvc",
+    "databaseProvider": "ef",
+    "databaseManagementSystem": "sqlite",
+    "theme": "leptonx-lite",
+    "themeStyle": "",
+    "publicWebsite": "",
+    "socialLogin": ""
+  }
+}
