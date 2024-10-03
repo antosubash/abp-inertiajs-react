@@ -1,0 +1,26 @@
+{
+  "template": "app-nolayers",
+  "imports": {
+    "Volo.Abp.Account": {
+      "version": "8.3.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.OpenIddict": {
+      "version": "8.3.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.Identity": {
+      "version": "8.3.0",
+      "isInstalled": true
+    },
+    "Volo.Abp.TenantManagement": {
+      "version": "8.3.0",
+      "isInstalled": true
+    }
+  },
+  "packages": {
+    "InertiaDemo": {
+      "path": "InertiaDemo/InertiaDemo.abppkg"
+    }
+  }
+}

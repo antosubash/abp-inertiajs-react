@@ -1,0 +1,12 @@
+﻿{
+  "applications": {
+    "InertiaDemo": {
+      "type": "dotnet-project",
+      "launchUrl": "https://localhost:44374",
+      "path": "../../InertiaDemo/InertiaDemo.csproj",
+      "execution": {
+        "order": 0
+      }
+    }
+  }
+}
