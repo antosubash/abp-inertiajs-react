@@ -33,6 +33,26 @@ public class InertiaDemoMenuContributor : IMenuContributor
             )
         );
 
+        context.Menu.AddItem(
+            new ApplicationMenuItem(
+                "Counter",
+                "Counter",
+                url: "/counter",
+                icon: "fas fa-list",
+                order: 1
+            )
+        );
+
+        context.Menu.AddItem(
+            new ApplicationMenuItem(
+                "About",
+                "About",
+                url: "/about",
+                icon: "fas fa-info-circle",
+                order: 2
+            )
+        );
+
 
         //Administration
         var administration = context.Menu.GetAdministration();

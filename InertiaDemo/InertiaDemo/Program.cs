@@ -1,4 +1,5 @@
 using System;
+using InertiaCore.Extensions;
 using InertiaDemo.Data;
 using Serilog;
 using Serilog.Events;
@@ -13,6 +14,19 @@ public class Program
         try
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddInertia(options =>
+            {
+                options.RootView = "~/Views/App.cshtml";
+            });
+            builder.Services.AddViteHelper(options =>
+            {
+                options.PublicDirectory = "wwwroot";
+                options.BuildDirectory = "build";
+                options.ManifestFilename = "manifest.json";
+            });
+
+
+
             builder.Host.AddAppSettingsSecretsJson()
                 .UseAutofac()
                 .UseSerilog((context, services, loggerConfiguration) =>
@@ -54,6 +68,7 @@ public class Program
             }
 
             Log.Information("Starting InertiaDemo.");
+            app.UseInertia();
             await app.RunAsync();
             return 0;
         }
