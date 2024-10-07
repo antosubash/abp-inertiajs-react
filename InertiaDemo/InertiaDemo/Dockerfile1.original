@@ -12,11 +12,11 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["InertiaDemo/NuGet.Config", "InertiaDemo/"]
-COPY ["InertiaDemo/InertiaDemo/InertiaDemo.csproj", "InertiaDemo/InertiaDemo/"]
-RUN dotnet restore "./InertiaDemo/InertiaDemo/InertiaDemo.csproj"
+COPY ["NuGet.Config", "."]
+COPY ["InertiaDemo/InertiaDemo.csproj", "InertiaDemo/"]
+RUN dotnet restore "./InertiaDemo/InertiaDemo.csproj"
 COPY . .
-WORKDIR "/src/InertiaDemo/InertiaDemo"
+WORKDIR "/src/InertiaDemo"
 # Update package list and install curl
 RUN apt-get update && \
     apt-get install -y curl
