@@ -68,13 +68,9 @@ public class Program
             var app = builder.Build();
             await app.InitializeApplicationAsync();
 
-            if (IsMigrateDatabase(args))
-            {
-                await app
+            await app
                     .Services.GetRequiredService<InertiaDemoDbMigrationService>()
                     .MigrateAsync();
-                return 0;
-            }
 
             Log.Information("Starting InertiaDemo.");
             app.UseInertia();
