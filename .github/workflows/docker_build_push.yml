@@ -25,19 +25,11 @@ jobs:
         id: set-version
         run: echo "VERSION=${{ steps.tag_version.outputs.new_version }}" >> $GITHUB_ENV
 
-      - name: Display version
+      - name: Display version from tag_version
         run: echo "Generated version:${{ steps.tag_version.outputs.new_version }}"
 
       - name: Display version
         run: echo ${{ steps.set-version.outputs.VERSION }}
-
-  build:
-    runs-on: ubuntu-latest
-    needs: version
-
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
 
       - name: Set Up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -56,9 +48,9 @@ jobs:
           file: ./InertiaDemo/InertiaDemo/Dockerfile
           push: true
           tags: |
-            ghcr.io/${{ github.repository }}:${{ env.VERSION }}
+            ghcr.io/${{ github.repository }}:${{ steps.tag_version.outputs.new_version }}
             ghcr.io/${{ github.repository }}:latest
 
       - name: Image Digest
         run: |
-          echo "Image pushed with digest: ${{ steps.docker.outputs.digest }}"
+          echo "Image pushed with digest: ${{ steps.tag_version.outputs.new_version }}"
