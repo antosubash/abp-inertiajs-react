@@ -26,6 +26,9 @@ jobs:
         run: echo "VERSION=${{ steps.tag_version.outputs.new_version }}" >> $GITHUB_ENV
 
       - name: Display version
+        run: echo "Generated version:${{ steps.tag_version.outputs.new_version }}"
+
+      - name: Display version
         run: echo ${{ steps.set-version.outputs.VERSION }}
 
   build:
