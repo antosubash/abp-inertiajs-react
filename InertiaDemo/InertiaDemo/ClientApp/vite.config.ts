@@ -7,6 +7,9 @@ const outDir = "../wwwroot/build";
 
 mkdirSync(outDir, { recursive: true });
 
+const fullPath = path.resolve(__dirname, outDir);
+console.log("Output directory: ", fullPath);
+
 export default defineConfig({
   plugins: [
     laravel({
