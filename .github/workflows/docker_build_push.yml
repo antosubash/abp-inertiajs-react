@@ -58,5 +58,5 @@ jobs:
       - name: Deploy Stage
         uses: fjogeleit/http-request-action@v1
         with:
-          url: 'https://admin.antosubash.com/api/webhooks/f269109f-2741-4c8a-8af3-9ab3f62f88ce'
+          url: ${{ secrets.WEB_HOOK_URL }}
           method: 'POST'
