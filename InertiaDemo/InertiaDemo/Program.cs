@@ -46,21 +46,14 @@ public class Program
                             .WriteTo.Async(c => c.File("Logs/logs.txt"))
                             .WriteTo.Async(c => c.Console());
 
-                        if (IsMigrateDatabase(args))
-                        {
-                            loggerConfiguration.MinimumLevel.Override(
-                                "Volo.Abp",
-                                LogEventLevel.Warning
-                            );
-                            loggerConfiguration.MinimumLevel.Override(
-                                "Microsoft",
-                                LogEventLevel.Warning
-                            );
-                        }
-                        else
-                        {
-                            loggerConfiguration.WriteTo.Async(c => c.AbpStudio(services));
-                        }
+                        loggerConfiguration.MinimumLevel.Override(
+                            "Volo.Abp",
+                            LogEventLevel.Warning
+                        );
+                        loggerConfiguration.MinimumLevel.Override(
+                            "Microsoft",
+                            LogEventLevel.Warning
+                        );
                     }
                 );
             builder.Services.AddDataMigrationEnvironment();
@@ -68,9 +61,7 @@ public class Program
             var app = builder.Build();
             await app.InitializeApplicationAsync();
 
-            await app
-                    .Services.GetRequiredService<InertiaDemoDbMigrationService>()
-                    .MigrateAsync();
+            await app.Services.GetRequiredService<InertiaDemoDbMigrationService>().MigrateAsync();
 
             Log.Information("Starting InertiaDemo.");
             app.UseInertia();
