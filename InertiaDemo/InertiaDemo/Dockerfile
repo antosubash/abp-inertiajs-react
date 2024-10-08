@@ -11,6 +11,7 @@ EXPOSE 8081
 # This stage is used to build the service project
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 ARG BUILD_CONFIGURATION=Release
+ARG RUNTIME_IDENTIFIER=linux-x64
 WORKDIR /src
 COPY ["InertiaDemo/NuGet.Config", "InertiaDemo/"]
 COPY ["InertiaDemo/InertiaDemo/InertiaDemo.csproj", "InertiaDemo/InertiaDemo/"]
@@ -29,7 +30,7 @@ RUN dotnet build "./InertiaDemo.csproj" -c $BUILD_CONFIGURATION -o /app/build
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./InertiaDemo.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "./InertiaDemo.csproj" -c $BUILD_CONFIGURATION -r $RUNTIME_IDENTIFIER -o /app/publish --self-contained
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
