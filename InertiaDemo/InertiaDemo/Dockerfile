@@ -25,12 +25,18 @@ RUN apt-get update && \
 # Install Node.js LTS version
 RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
     apt-get install -y nodejs
+
+# Install Sqllite
+RUN apt-get install -y sqlite3 libsqlite3-dev
+RUN dotnet tool install -g Volo.Abp.Cli
+ENV PATH="${PATH}:/root/.dotnet/tools"
+RUN abp install-libs
 RUN dotnet build "./InertiaDemo.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 # This stage is used to publish the service project to be copied to the final stage
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "./InertiaDemo.csproj" -c $BUILD_CONFIGURATION -r $RUNTIME_IDENTIFIER -o /app/publish --self-contained
+RUN dotnet publish "./InertiaDemo.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 # This stage is used in production or when running from VS in regular mode (Default when not using the Debug configuration)
 FROM base AS final
