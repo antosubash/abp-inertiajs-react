@@ -54,3 +54,9 @@ jobs:
       - name: Image Digest
         run: |
           echo "Image pushed with digest: ${{ steps.tag_version.outputs.new_version }}"
+
+      - name: Deploy Stage
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: 'https://admin.antosubash.com/api/webhooks/f269109f-2741-4c8a-8af3-9ab3f62f88ce'
+          method: 'POST'
