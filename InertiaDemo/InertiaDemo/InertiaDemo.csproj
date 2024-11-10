@@ -48,7 +48,7 @@
     <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="8.3.3" />
   </ItemGroup>
 
-  <ItemGroup>   
+  <ItemGroup>
     <PackageReference Include="Volo.Abp.TenantManagement.Web" Version="8.3.3" />
     <PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="8.3.3" />
     <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="8.3.3" />
@@ -86,14 +86,14 @@
   <ItemGroup>
     <PackageReference Include="Volo.Abp.Studio.Client.AspNetCore" Version="0.9.5" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>compile; contentFiles; build; buildMultitargeting; buildTransitive; analyzers; native</PrivateAssets>
     </PackageReference>
   </ItemGroup>
-  
+
   <ItemGroup Condition="Exists('./openiddict.pfx')">
     <None Remove="openiddict.pfx" />
     <EmbeddedResource Include="openiddict.pfx">
@@ -124,6 +124,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="wwwroot/build/hot" />
     <None Include="wwwroot\**">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
