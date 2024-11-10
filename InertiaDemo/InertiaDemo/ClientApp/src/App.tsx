@@ -2,6 +2,7 @@ import { createRoot } from "react-dom/client";
 import { createInertiaApp } from "@inertiajs/react";
 import { resolvePageComponent } from "laravel-vite-plugin/inertia-helpers";
 import "./index.css";
+import MainLayout from "./layout/MainLayout";
 
 const appName =
   window.document.getElementsByTagName("title")[0]?.innerText || "Inertia";
@@ -16,6 +17,6 @@ createInertiaApp({
 
   setup({ el, App, props }) {
     const root = createRoot(el);
-    root.render(<App {...props} />);
+    root.render(<MainLayout><App {...props} /></MainLayout>);
   },
 });

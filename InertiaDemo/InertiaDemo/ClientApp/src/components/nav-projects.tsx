@@ -3,7 +3,8 @@ import {
   Forward,
   MoreHorizontal,
   Trash2,
-} from "lucide-react";
+  type LucideIcon,
+} from "lucide-react"
 
 import {
   DropdownMenu,
@@ -11,7 +12,7 @@ import {
   DropdownMenuItem,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from "@/components/ui/dropdown-menu"
 import {
   SidebarGroup,
   SidebarGroupLabel,
@@ -20,29 +21,18 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
   useSidebar,
-} from "@/components/ui/sidebar";
-export default function Index(props: { name: string }) {
-  const { isMobile } = useSidebar();
+} from "@/components/ui/sidebar"
 
-  console.log(props.name);
-
-  const projects = [{
-    name: "Project 1",
-    url: "#",
-    icon: Folder,
-  }, {
-    name: "Project 2",
-    url: "#",
-    icon: Folder,
-  }, {
-    name: "Project 3",
-    url: "#",
-    icon: Folder,
-  }, {
-    name: "Project 4",
-    url: "#",
-    icon: Folder,
-  }];
+export function NavProjects({
+  projects,
+}: {
+  projects: {
+    name: string
+    url: string
+    icon: LucideIcon
+  }[]
+}) {
+  const { isMobile } = useSidebar()
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
@@ -93,5 +83,5 @@ export default function Index(props: { name: string }) {
         </SidebarMenuItem>
       </SidebarMenu>
     </SidebarGroup>
-  );
+  )
 }
