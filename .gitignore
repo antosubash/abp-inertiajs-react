@@ -395,3 +395,7 @@ FodyWeavers.xsd
 
 # JetBrains Rider
 *.sln.iml
+/InertiaDemo/InertiaDemo/wwwroot/build
+*.tsbuildinfo
+InertiaDemo/InertiaDemo/ClientApp/tsconfig.app.tsbuildinfo
+InertiaDemo/InertiaDemo/ClientApp/tsconfig.node.tsbuildinfo
