@@ -12,8 +12,8 @@ using Volo.Abp.EntityFrameworkCore;
 namespace InertiaDemo.Migrations
 {
     [DbContext(typeof(InertiaDemoDbContext))]
-    [Migration("20241003084608_Initial")]
-    partial class Initial
+    [Migration("20241110201948_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -21,7 +21,7 @@ namespace InertiaDemo.Migrations
 #pragma warning disable 612, 618
             modelBuilder
                 .HasAnnotation("_Abp_DatabaseProvider", EfCoreDatabaseProvider.Sqlite)
-                .HasAnnotation("ProductVersion", "8.0.4");
+                .HasAnnotation("ProductVersion", "8.0.10");
 
             modelBuilder.Entity("Volo.Abp.AuditLogging.AuditLog", b =>
                 {

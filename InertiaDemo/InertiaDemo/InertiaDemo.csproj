@@ -13,82 +13,82 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AspNetCore.InertiaCore" Version="0.0.8" />
+    <PackageReference Include="AspNetCore.InertiaCore" Version="0.0.9" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
-    <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
-    <PackageReference Include="Serilog.Sinks.Async" Version="1.5.0" />
-    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.4" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+    <PackageReference Include="Serilog.Sinks.Async" Version="2.1.0" />
+    <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="8.0.10" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Autofac" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.AutoMapper" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Swashbuckle" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.Autofac" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.AutoMapper" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.Swashbuckle" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Serilog" Version="8.3.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.Account.Web.OpenIddict" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Account.HttpApi" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Account.Application" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.Account.Web.OpenIddict" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.Account.HttpApi" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.Account.Application" Version="8.3.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Identity.Web" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Identity.Application" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.Identity" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.Identity.Web" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.Identity.HttpApi" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.Identity.Application" Version="8.3.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.OpenIddict" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.PermissionManagement.Web" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Domain.OpenIddict" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Web" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.HttpApi" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.Application" Version="8.3.3" />
   </ItemGroup>
 
   <ItemGroup>   
-    <PackageReference Include="Volo.Abp.TenantManagement.Web" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Web" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.TenantManagement.HttpApi" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.TenantManagement.Application" Version="8.3.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.FeatureManagement.Web" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Web" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.HttpApi" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.Application" Version="8.3.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.SettingManagement.Web" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.SettingManagement.HttpApi" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.SettingManagement.Application" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Web" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.SettingManagement.HttpApi" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.SettingManagement.Application" Version="8.3.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite" Version="3.3.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.LeptonXLite" Version="3.3.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.AuditLogging.EntityFrameworkCore" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.Identity.EntityFrameworkCore" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.OpenIddict.EntityFrameworkCore" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.TenantManagement.EntityFrameworkCore" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.BackgroundJobs.EntityFrameworkCore" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.BlobStoring.Database.EntityFrameworkCore" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.FeatureManagement.EntityFrameworkCore" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="8.3.0" />
-    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="8.3.0" />
+    <PackageReference Include="Volo.Abp.AuditLogging.EntityFrameworkCore" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.Identity.EntityFrameworkCore" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.OpenIddict.EntityFrameworkCore" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.TenantManagement.EntityFrameworkCore" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.BackgroundJobs.EntityFrameworkCore" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.BlobStoring.Database.EntityFrameworkCore" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.FeatureManagement.EntityFrameworkCore" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.PermissionManagement.EntityFrameworkCore" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.SettingManagement.EntityFrameworkCore" Version="8.3.3" />
+    <PackageReference Include="Volo.Abp.EntityFrameworkCore.Sqlite" Version="8.3.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.Studio.Client.AspNetCore" Version="0.8.3" />
+    <PackageReference Include="Volo.Abp.Studio.Client.AspNetCore" Version="0.9.5" />
   </ItemGroup>
   
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.10">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
       <PrivateAssets>compile; contentFiles; build; buildMultitargeting; buildTransitive; analyzers; native</PrivateAssets>
     </PackageReference>
@@ -141,7 +141,7 @@
     <!-- Include the newly-built files in the publish output -->
     <ItemGroup>
       <DistFiles Include="$(SpaRoot)build\**" />
-      <ResolvedFileToPublish Include="@(DistFiles->'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
+      <ResolvedFileToPublish Include="@(DistFiles-&gt;'%(FullPath)')" Exclude="@(ResolvedFileToPublish)">
         <RelativePath>wwwroot\%(RecursiveDir)%(FileName)%(Extension)</RelativePath>
         <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
         <ExcludeFromSingleFile>true</ExcludeFromSingleFile>

@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { Head } from "@inertiajs/react";
 export default function Index(props: { name: string }) {
   return (
@@ -11,6 +12,7 @@ export default function Index(props: { name: string }) {
       <div>this is a test your</div>
 
       <div>name is {props.name}</div>
+      <Button>Click me</Button>
     </>
   );
 }
