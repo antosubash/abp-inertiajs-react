@@ -42,6 +42,5 @@ RUN dotnet publish "./InertiaDemo.csproj" -c $BUILD_CONFIGURATION -o /app/publis
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-# COPY --from=publish /src/InertiaDemo/InertiaDemo/wwwroot/build /app/wwwroot/build
-# RUN ls /app/wwwroot/build
+COPY --from=publish /src/InertiaDemo/InertiaDemo/wwwroot/build /app/wwwroot/build
 ENTRYPOINT ["dotnet", "InertiaDemo.dll"]
