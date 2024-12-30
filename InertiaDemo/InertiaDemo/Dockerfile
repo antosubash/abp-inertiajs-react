@@ -28,7 +28,7 @@ RUN curl -fsSL https://deb.nodesource.com/setup_lts.x | bash - && \
 
 # Install Sqllite
 RUN apt-get install -y sqlite3 libsqlite3-dev
-RUN dotnet tool install -g Volo.Abp.Cli
+RUN dotnet tool install --global Volo.Abp.Cli --version 8.3.4
 ENV PATH="${PATH}:/root/.dotnet/tools"
 RUN abp install-libs
 RUN dotnet build "./InertiaDemo.csproj" -c $BUILD_CONFIGURATION -o /app/build
